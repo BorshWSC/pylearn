@@ -1,0 +1,250 @@
+.header
+{
+    position: relative;
+
+    border-bottom: 1px solid #dadce0;
+    box-shadow: none;
+
+    z-index: 1;
+}
+
+a{
+	text-decoration: none;
+	color: #5e626b;
+}
+
+.article{
+
+	width: 100%;
+	margin: 60px 0;
+	display: flex;
+	padding: 0;
+	
+}
+
+.article__inner{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+.article__item{
+	width: 450px;
+	margin-right: 50px;
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	border: 1px solid #dadce0;
+	transition: all .2s linear;
+}
+
+.article__item:hover{
+	transform: scale(1.03);
+}
+
+.article__item:nth-child(3n+3){
+	margin-right: 0;
+}
+
+.article__item__header{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	border-bottom: 1px solid #dadce0;
+}
+
+.article__item__header img{
+
+}
+
+.article__item:nth-child(1) .article__item__header{
+	background: #11998e; 
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  
+    background: linear-gradient(to right, #38ef7d, #11998e); 
+}
+
+.article__item:nth-child(2) .article__item__header{
+	background: #f12711;  
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  
+    background: linear-gradient(to right, #f5af19, #f12711);
+ 
+}
+
+.article__item:nth-child(3) .article__item__header{
+	background: #c31432;  
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+    background: linear-gradient(to right, #240b36, #c31432); 
+
+}
+
+.article__item:nth-child(4) .article__item__header{
+	background: #BE93C5;  
+    background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  
+    background: linear-gradient(to right, #7BC6CC, #BE93C5); 
+
+}
+
+.article__item__title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.article__item__footer{
+	width: 100%;
+	height: 70px;
+	padding: 10px;
+}
+
+.article__inner-course{
+	display: flex;
+
+	justify-content: space-between;
+}
+
+.article__content{
+	width: 80%;
+}
+
+.article__sidebar{
+	width: 20%;
+	margin-right: 40px;
+}
+
+.article__body{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #dadce0;
+	border: 1px solid #dadce0;
+	border-radius: 5px;
+	display: flex;;;
+	border-radius: 5px;
+}
+
+.article__header{
+	display: flex;
+	width: 100%;
+	padding-bottom: 20px;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.article__header .title{
+	text-align:center;
+	font-size: 32px;
+	padding-bottom: 10px;
+	color: #000;
+}
+
+/*Sidebar*/
+.sidebar{
+	height: 100%;
+}
+
+.sidebar__section
+{
+	position: relative;
+    font-size: 16px;
+
+    display: flex;
+
+    width: 100%;
+    height: 40px;
+
+    cursor: pointer;
+    transition: all .2s linear;
+    text-align: center;
+
+    border-bottom: 1px solid #dadce0;
+
+    align-items: center;
+    justify-content: center;
+	color: #5e626b;
+	background-color: #f8f8f8;
+}
+
+.sidebar__section:hover
+{
+    color: #000;
+    border-color: #000;
+}
+
+
+.sidebar__section p
+{
+    font-family: 'Rubick', sans-serif;
+    font-weight: 400;
+}
+
+.sidebar__section-active
+{
+    color: #000;
+    border-color: #000;
+}
+
+.stablinks{
+	display: none;
+}
+
+.stablinks-active{
+	display: block;
+}	
+
+.stablinks__inner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.stablinks a{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	justify-content: center;
+	transition: all .2s linear;
+}
+
+.sidebar__section:after{
+	display: block;
+	content: '';
+	border-top: 2px solid #dadce0;
+	border-right: 2px solid #dadce0;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translate(-50%,-25%) rotate(-45deg);
+	transition: all .2s linear;
+}
+
+.sidebar__section:hover.sidebar__section:after{
+	border-color: #000;
+}
+
+.sidebar__section-after:after{
+	display: none;
+}
+
+.sidebar__section-active:after{
+	border-color: #000;
+	transform: translate(-50%,-70%) rotate(135deg);
+}
+
+.sidebar__section-active{
+	color: #000;
+}
+
+.stablinks__a-active p{
+	color: #000;
+}

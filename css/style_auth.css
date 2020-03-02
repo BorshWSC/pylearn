@@ -1,0 +1,313 @@
+html{
+    visibility: hidden;
+}
+
+body
+{
+    font-family: 'Rubick', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.1;
+
+    margin: 0;
+
+    color: #5e626b;
+}
+
+*,
+*:before,
+*:after{
+	-webkit- box-sizing: border-box;
+	-moz- box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p
+{
+    margin: 0;
+}
+
+.form
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 70px 50px 50px 50px;
+
+    transform: translate3d(-50%,-50%,0);
+    min-height: 500px;
+    border-radius: 5px;
+    background-color: #fff;
+
+    border: 1px solid #dadce0;
+
+    align-items: center;
+}
+
+.form-recover{
+    min-height: 470px;
+}
+
+.form-reset{
+    min-height: 0;
+}
+
+.form p{
+    font-size: 40px;
+    color: #000;
+    padding-bottom: 50px;
+}
+
+.form__inner
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 290px;
+    min-height: 500px;
+
+    align-items: center;
+}
+
+.form__header
+{
+    position: relative;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.form__header p
+{
+    margin-bottom: -30px;
+}
+
+.form__header i
+{
+    color: #000;
+    font-size: 50px;
+}
+
+.form__description p{
+    text-align: justify;
+    font-size: 16px;
+    color: #5e626b;
+}
+
+.form__button
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form button,
+.form__button button
+{
+    font-family: 'Rubick', sans-serif;
+    font-size: 18px;
+
+    cursor: pointer;
+    transition: all .2s linear;
+    text-decoration: none;
+
+    color: #5e626b;
+    border: 1px solid #5e626b;
+    border-radius: 2px;
+    background-color: #fff;
+
+}
+
+.form__button button
+{
+    width: 50%;
+    padding: 18px 0;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.form__button button:first-child{
+    margin-left: 0;
+}
+
+
+.form__button button:hover,
+.form button:hover
+{
+    color: #fff;
+    background-color: #5e626b;
+}
+
+.input-text
+{
+    position: relative;
+
+    width: 290px;
+    margin-bottom: 40px;
+}
+
+
+.input-text input
+{
+
+    font-family: 'Rubick', sans-serif;
+    font-size: 16px;
+
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.input-text span:before
+{
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    content: '';
+    transition: all .2s linear;
+
+    opacity: 1;
+    background-color: #dadce0;
+}
+
+.input-text span:after
+{
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+
+    content: attr(data-placeholder);
+    transition: all .2s linear;
+    transform: translateY(-50%);
+
+    opacity: .5;
+
+    color: #000;
+}
+
+.subtitle{
+    font-size: 16px !important;
+    color: #5e626b !important;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 0 !important;
+    margin-top: -10px;
+}
+
+.recovery{
+    display: flex;
+    width: 100%;
+    margin-top: -20px;
+}
+
+.recovery p{
+    font-size: 14px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: right;
+    color: #5e626b;
+}
+
+.recovery a{
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.active ~ span:after
+{
+    transform: translateY(-240%);
+
+    opacity: 1;
+}
+
+.active ~ span:before
+{
+    background-color: #000;
+}
+
+
+.form button
+{
+    width: 70%;
+    padding: 10px 0;
+}
+
+.inform
+{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.inform p{
+    color: #5e626b ;
+    font-size: 14px;
+    padding-bottom: 0;
+}
+
+.inform a
+{
+    padding-top: 
+    padding-left: 5px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.inform-recover{
+    text-align: center;
+}
+
+.inform-recover a{
+    margin-top: 10px; 
+}
+
+.error{
+    color: red;
+}
+
+.error:after
+{
+    color: red !important;
+    opacity: 1 !important;
+}
+
+.error:before{
+    background-color: #000 !important;
+}
+
+.success{
+    text-align: center;
+    color: green !important;
+}
